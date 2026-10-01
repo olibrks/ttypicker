@@ -1,0 +1,17 @@
+[FileChooser]
+term="kitty --class ranger --title {TITLE}"
+# term="alacritty --class ranger --title {TITLE} -e"
+# term="ghostty --class ranger --title "{TITLE}" -e"
+# term="wezterm start --always-new-process --class ranger --"
+in_path="{SUGGESTED_NAME}"
+# in_path="{LAST_PATH}"
+# in_path="{APP_LAST_PATH}"
+
+[FileChooser.OpenFile]
+exec="ranger --choose{?DIRECTORY:dir:file{?MULTIPLE:s}}={OUT_PATH} {IN_PATH}"
+
+[FileChooser.SaveFile]
+exec="ranger --choosefile={OUT_PATH} {IN_PATH}"
+
+[FileChooser.SaveFiles]
+exec="ranger --choosedir={OUT_PATH} {IN_PATH}"

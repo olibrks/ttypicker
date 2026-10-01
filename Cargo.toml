@@ -1,0 +1,28 @@
+[package]
+name = "ttypicker"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "XDG Desktop Portal FileChooser backend running a terminal file manager"
+license = "MIT"
+authors      = [ "olibrks <olibrks@gmail.com>" ]
+repository = "https://github.com/olibrks/ttypicker"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+tokio = { version = "1", features = ["full", "tracing"] }
+toml = "1.1"
+url = { version = "2.5", features = ["serde"] }
+zbus = { version = "5.16", default-features = false, features = ["tokio"] }
+
+# Utils
+shellexpand = "3"
+shlex = "2.0"
+tempfile = "3.27"
+thiserror = "2.0"
+
+# Tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-journald = "0.3"

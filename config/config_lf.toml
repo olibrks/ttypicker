@@ -1,0 +1,14 @@
+[FileChooser]
+term="kitty --class lf --title {TITLE}"
+# term="alacritty --class lf --title "{TITLE}" -e"
+# term="ghostty --class lf --title "{TITLE}" -e"
+# term="wezterm start --always-new-process --class yazi --"
+exec="""
+lf -command 'set hidden; set nopreview; set ratios 1; set drawbox; \
+set promptfmt \"Select file{?MULTIPLE:s} [%w] %S q: cancel, l: confirm\"' \
+-selection-path {OUT_PATH} {IN_PATH}\
+"""
+in_path="{SUGGESTED_PATH}"
+# in_path="{LAST_PATH}"
+# in_path="{APP_LAST_PATH}"
+

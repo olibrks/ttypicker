@@ -1,0 +1,10 @@
+[FileChooser]
+term="kitty --class yazi --title {TITLE}"
+# term="alacritty --class yazi --title "{TITLE}" -e"
+# term="ghostty --class yazi --title "{TITLE}" -e"
+# term="wezterm start --always-new-process --class yazi --"
+# env="{YAZI_LOG=debug}"
+exec="yazi --chooser-file={OUT_PATH} {IN_PATH}"
+in_path="{SUGGESTED_PATH}"
+# in_path="{LAST_PATH}"
+# in_path="{APP_LAST_PATH}"

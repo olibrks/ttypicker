@@ -1,0 +1,12 @@
+[Unit]
+Description=XDG Desktop Portal Filechooser backend using TTY
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.impl.portal.desktop.ttypicker
+ExecStart=%h/.local/bin/ttypicker
+Restart=on-failure
+RestartPreventExitStatus=72 78
+Slice=session.slice

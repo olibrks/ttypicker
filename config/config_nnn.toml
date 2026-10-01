@@ -1,0 +1,10 @@
+[FileChooser]
+term="kitty --class nnn --title {TITLE}"
+# term="alacritty --class nnn --title {TITLE} -e"
+# term="ghostty --class nnn --title "{TITLE}" -e"
+# term="wezterm start --always-new-process --class nnn --"
+exec="nnn -H -Q -o -p {OUT_PATH} {IN_PATH}"
+env.NNN_TMPFILE="{OUT_PATH}"
+in_path="{SUGGESTED_PATH}"
+# in_path="{LAST_PATH}"
+# in_path="{APP_LAST_PATH}"

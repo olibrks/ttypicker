@@ -1,0 +1,9 @@
+[FileChooser]
+term="kitty --class superfile --title {TITLE}"
+# term="alacritty --class superfile --title {TITLE} -e"
+# term="ghostty --class superfile --title "{TITLE}" -e"
+# term="wezterm start --always-new-process --class superfile --"
+in_path="{SUGGESTED_NAME}"
+# in_path="{LAST_PATH}"
+# in_path="{APP_LAST_PATH}"
+exec="spf --chooser-file {OUT_PATH} {IN_PATH}"
